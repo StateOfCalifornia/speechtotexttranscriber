@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Speech Recognition Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<h1>Speech Recognition Form</h1>
+	<form action="#" method="POST">
+		<label for="speech-input">Say something:</label>
+		<button type="button" id="start-recognition-btn">Start Recognition</button>
+	</form>
+
+	<script>
+		const SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+		const recognition = new SpeechRecognition();
+
+		const startRecognitionBtn = document.querySelector('#start-recognition-btn');
+
+		startRecognitionBtn.addEventListener('click', () => {
+			recognition.start();
+			startRecognitionBtn.disabled = true;
+		});
+
+		recognition.addEventListener('result', (event) => {
+			const transcript = event.results[0][0].transcript;
+			alert(transcript);
+		});
+
+		recognition.addEventListener('end', () => {
+			startRecognitionBtn.disabled = false;
+		});
+
+	</script>
+</body>
+</html>
