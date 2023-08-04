@@ -1,14 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Speech Recognition Form</title>
+	<title>Speech to Text Demo</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: flex-start; /* Makes the card a bit higher */
+			height: 100vh;
+			padding-top: 10vh; /* Provides some space at the top */
+			margin: 0;
+			background: #ffffff;
+			font-family: Arial, sans-serif;
+		}
+
+		form {
+			background: #f2f2f2;  /* light grey background */
+			padding: 2rem;       /* Reduced padding */
+			border-radius: 10px;
+			box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, 0.1);
+			width: 400px;        
+			height: 300px;       /* Reduced height */
+			text-align: center;
+
+			/* Flexbox properties for vertical centering */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		button {
+			color: #ffffff; /* text color */
+			background-color: rgba(70, 130, 180, 0.6); /* translucent blue background */
+			border: none;
+			padding: 0.5rem 0.8rem; /* Reduced horizontal padding */
+			margin-top: 1rem;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			outline: none;
+			display: inline-flex; /* To align button text and microphone icon */
+			align-items: center;
+			justify-content: center; /* Centers the text and icon horizontally */
+		}
+
+		button:hover {
+			background-color: rgba(70, 130, 180, 0.8);
+		}
+
+		label {
+			color: #000;
+			display: inline-block; /* To allow microphone icon to be placed beside */
+		}
+
+		.fa-microphone {
+			margin-right: 10px;
+		}
+
+	</style>
 </head>
 <body>
-	<h1>Speech Recognition Form</h1>
 	<form action="#" method="POST">
-		<label for="speech-input">Say something:</label>
+		<h1>Speech to Text Demo</h1>
+		<label for="speech-input">
+			<i class="fas fa-microphone"></i> <!-- Font Awesome Microphone Icon -->
+			Say something:
+		</label>
+		<br>
 		<button type="button" id="start-recognition-btn">Start Recognition</button>
 	</form>
 
@@ -31,7 +92,6 @@
 		recognition.addEventListener('end', () => {
 			startRecognitionBtn.disabled = false;
 		});
-
 	</script>
 </body>
 </html>
