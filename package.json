@@ -1,0 +1,25 @@
+{
+  "name": "speechtotexttranscriber",
+  "version": "1.0.0",
+  "description": "This API allows you to integrate speech recognition functionality into your web applications, making it possible for users to input text using their voice.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StateOfCalifornia/speechtotexttranscriber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StateOfCalifornia/speechtotexttranscriber/issues"
+  },
+  "homepage": "https://github.com/StateOfCalifornia/speechtotexttranscriber#readme",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2"
+  }
+}

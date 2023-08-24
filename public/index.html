@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Speech to Text Demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+    <form action="#" method="POST">
+        <h1>Speech to Text Demo</h1>
+        <label for="language-select">Select Language:</label>
+        <select id="language-select">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fr">Français</option>
+            <option value="de">Deutsch</option>
+            <option value="ru">Русский</option>
+            <option value="zh-Hans">中文</option>
+            <option value="hi">हिंदी</option>
+            <option value="ar">العربية</option>
+        </select>
+        <label for="speech-input">
+            <i class="fas fa-microphone"></i>
+            Say something:
+        </label>
+        <br>
+        <button type="button" id="start-recognition-btn">Start Recognition</button>
+    </form>
+<script src="/scripts/scripts.js"></script>
+</body>
+</html>
