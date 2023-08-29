@@ -1,0 +1,74 @@
+/* Styles for the Card */
+.card {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f0f0f0; /* grey color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Styles for the title */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+/* Styles for the buttons */
+.button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: rgba(0, 123, 255, 0.7); 
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Make it take up the full width of its parent */
+  max-width: 300px; /* Ensuring the button doesn't exceed this width */
+  margin-left: auto; /* Centering the button */
+  margin-right: auto; /* Centering the button */
+  display: flex;
+  align-items: center;
+  gap: 8px; 
+}
+
+.button:hover {
+  background-color: rgba(0, 123, 255, 0.9); /* Slightly darker on hover */
+}
+
+/* Styles for form controls */
+.card form > * {
+  display: block;
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+/* Rounded dropdown style */
+.dropdown {
+  border-radius: 5px;
+  padding: 5px 10px;
+  max-width: 300px;
+  width: 100%;
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+@keyframes blinking {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+.blinking {
+  animation: blinking 1s infinite;
+}
+
+.microphone-icon {
+  margin-right: 8px; /* Adjust this value as needed for the desired spacing */
+}
